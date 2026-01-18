@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTO | OWL & SKULL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Specific styles for product page */
+        .product-detail-container {
+            padding: 120px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            min-height: 80vh;
+        }
+
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            border: 1px solid var(--grey-light);
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid transparent;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .thumbnail:hover,
+        .thumbnail.active {
+            border-color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-category {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.7;
+            letter-spacing: 2px;
+        }
+
+        .product-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 3rem;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .product-price {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .product-description {
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 20px;
+            border-top: 1px solid var(--grey-light);
+            border-bottom: 1px solid var(--grey-light);
+            padding: 20px 0;
+        }
+
+        .selector-group {
+            margin-bottom: 20px;
+        }
+
+        .selector-label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .option-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            background: transparent;
+            border: 1px solid var(--grey-light);
+            color: var(--text-color);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .option-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .option-btn.selected {
+            background: var(--text-color);
+            color: var(--bg-color) !important;
+            border-color: var(--text-color);
+            font-weight: bold;
+        }
+
+        .size-btn {
+            width: 50px;
+            height: 50px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .color-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--grey-light);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .color-btn[data-color="NEGRO"] {
+            background-color: #000;
+        }
+
+        .color-btn[data-color="BLANCO"] {
+            background-color: #fff;
+        }
+
+        .color-btn[data-color="GRIS"] {
+            background-color: #888;
+        }
+
+        .color-btn.selected {
+            box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--text-color);
+        }
+
+        .add-to-cart-container {
+            margin-top: 20px;
+        }
+
+        .btn-add-large {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-container {
+                grid-template-columns: 1fr;
+                padding-top: 100px;
+            }
+
+            .product-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 100px;
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="announcement-bar">
+            <span>RESILIENCIA ES UN ARMA. DESPACHOS A TODO CHILE.</span>
+        </div>
+        <nav class="container">
+            <div class="nav-left">
+                <button id="menu-toggle">MENÚ</button>
+            </div>
+            <div class="logo">
+                <a href="index.html"><img src="Imagenes/Owl & Skull - Frente.png" alt="OWL & SKULL"
+                        class="nav-logo-img"></a>
+            </div>
+            <div class="nav-right">
+                <a href="tienda.html">TIENDA</a>
+                <a href="fight-fest.html">EVENTOS</a>
+                <a href="javascript:void(0)" id="cart-btn">CARRITO <span class="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="product-container" class="product-detail-container">
+            <!-- Content injected via JS -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">OWL & SKULL</div>
+                    <p>DIRTY BOXING STREETWEAR CHILE.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>NAVEGACIÓN</h3>
+                    <a href="index.html">INICIO</a>
+                    <a href="tienda.html">TIENDA</a>
+                    <a href="fight-fest.html">EVENTOS</a>
+                </div>
+                <div class="footer-col">
+                    <h3>SOCIAL</h3>
+                    <a href="https://instagram.com/owlandskull" target="_blank">INSTAGRAM</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OWL & SKULL. SIN DERECHOS RESERVADOS. SOLO RESILIENCIA.</p>
+                <div class="footer-credit">
+                    <span class="powered-text">Creado por</span>
+                    <a href="https://agencialeondigital.com" target="_blank" class="credit-link">
+                        <img src="LeonDIgital.cl/LEON%20DIGITAL%20-%20LOGO_Mesa%20de%20trabajo%201%20copia%202.png"
+                            alt="Leon Digital" class="credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SIDE MENU OVERLAY -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-drawer">
+            <div class="menu-header">
+                <div class="menu-logo">OWL & SKULL</div>
+                <button id="close-menu">✕</button>
+            </div>
+            <nav class="menu-links">
+                <a href="index.html" class="menu-link">INICIO</a>
+                <a href="tienda.html" class="menu-link">TIENDA</a>
+                <a href="fight-fest.html" class="menu-link">EVENTOS</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2>TU ARSENAL</h2>
+                <button id="close-cart">CERRAR</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart-msg">EL CARRITO ESTÁ VACÍO</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>TOTAL:</span>
+                    <span id="cart-total-value">$0</span>
+                </div>
+                <button class="btn btn-checkout">COMPRAR AHORA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="main.js"></script>
+    <script>
+        let currentProduct = null;
+        let selectedVariant = null;
+        let selectedSize = null;
+        let selectedColor = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            const container = document.getElementById('product-container');
+
+            if (!productId) {
+                container.innerHTML = '<div class="error-message"><h2>PRODUCTO NO ENCONTRADO</h2><a href="tienda.html" class="btn">VOLVER A LA TIENDA</a></div>';
+                return;
+            }
+
+            currentProduct = getProductById(productId);
+
+            if (!currentProduct) {
+                container.innerHTML = '<div class="error-message"><h2>PRODUCTO NO ENCONTRADO</h2><a href="tienda.html" class="btn">VOLVER A LA TIENDA</a></div>';
+                return;
+            }
+
+            // Default variant
+            selectedVariant = currentProduct.variants[0];
+
+            renderProduct();
+        });
+
+        function renderProduct() {
+            const container = document.getElementById('product-container');
+
+            let variantsHtml = '';
+            currentProduct.variants.forEach((v, index) => {
+                const isSelected = v.type === selectedVariant.type;
+                variantsHtml += `<button class="option-btn ${isSelected ? 'selected' : ''}" onclick="selectVariant(${index})">${v.type}</button>`;
+            });
+
+            let sizesHtml = '';
+            currentProduct.sizes.forEach(size => {
+                const isSelected = size === selectedSize;
+                sizesHtml += `<button class="option-btn size-btn ${isSelected ? 'selected' : ''}" onclick="selectSize(this, '${size}')">${size}</button>`;
+            });
+
+            let colorsHtml = '';
+            currentProduct.colors.forEach(color => {
+                const isSelected = color === selectedColor;
+                colorsHtml += `<button class="color-btn ${isSelected ? 'selected' : ''}" data-color="${color}" onclick="selectColor(this, '${color}')" title="${color}"></button>`;
+            });
+
+            const html = `
+                <div style="grid-column: 1 / -1; margin-bottom: 20px;">
+                    <a href="tienda.html" style="color: var(--text-color); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-decoration: none; display: inline-flex; align-items: center; opacity: 0.7; transition: opacity 0.3s;">
+                        <span style="margin-right: 8px;">←</span> VOLVER A LA TIENDA
+                    </a>
+                </div>
+                <div class="product-gallery">
+                    <img src="${selectedVariant.images[0]}" alt="${currentProduct.name}" class="main-image" id="main-image">
+                    <div class="thumbnails">
+                        ${selectedVariant.images.map((img, i) => `<img src="${img}" class="thumbnail ${i === 0 ? 'active' : ''}" onclick="changeImage(this, '${img}')">`).join('')}
+                    </div>
+                </div>
+                <div class="product-details">
+                    <span class="product-category">${currentProduct.category} / ${selectedVariant.type}</span>
+                    <h1 class="product-title">${currentProduct.name}</h1>
+                    <div class="product-price" id="display-price">${formatPrice(selectedVariant.price)}</div>
+                    
+                    <div class="product-description">
+                        <p>${currentProduct.description}</p>
+                    </div>
+
+                    <div class="selector-group">
+                        <span class="selector-label">TIPO DE PRENDA</span>
+                        <div class="option-grid">
+                            ${variantsHtml}
+                        </div>
+                    </div>
+
+                    <div class="selector-group">
+                        <span class="selector-label">COLOR: <span id="selected-color-name">${selectedColor || 'SELECCIONAR'}</span></span>
+                        <div class="color-options">
+                            ${colorsHtml}
+                        </div>
+                    </div>
+
+                    <div class="selector-group">
+                        <span class="selector-label">TALLA</span>
+                        <div class="option-grid">
+                            ${sizesHtml}
+                        </div>
+                    </div>
+                    
+                    <div class="add-to-cart-container">
+                        <button class="btn btn-add-large" onclick="addToCartCurrentProduct()">AGREGAR AL ARSENAL</button>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        function formatPrice(price) {
+            return '$' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function selectVariant(index) {
+            selectedVariant = currentProduct.variants[index];
+            renderProduct();
+        }
+
+        function selectSize(btn, size) {
+            selectedSize = size;
+            document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+
+        function selectColor(btn, color) {
+            selectedColor = color;
+            document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            document.getElementById('selected-color-name').innerText = color;
+        }
+
+        function changeImage(el, src) {
+            document.getElementById('main-image').src = src;
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        function addToCartCurrentProduct() {
+            if (!selectedVariant) return;
+
+            if (!selectedColor) {
+                alert("POR FAVOR SELECCIONA UN COLOR.");
+                return;
+            }
+            if (!selectedSize) {
+                alert("POR FAVOR SELECCIONA UNA TALLA.");
+                return;
+            }
+
+            const cartItem = {
+                id: currentProduct.id + '-' + selectedVariant.type.replace(' ', '') + '-' + selectedSize + '-' + selectedColor,
+                name: currentProduct.name,
+                type: `${selectedVariant.type} | ${selectedColor} | ${selectedSize}`,
+                price: selectedVariant.price,
+                img: selectedVariant.images[0],
+                quantity: 1,
+                size: selectedSize,
+                color: selectedColor
+            };
+
+            if (window.cart) {
+                window.cart.addItem(cartItem);
+                document.getElementById('cart-overlay').classList.add('active');
+                window.cart.render();
+            }
+        }
+    </script>
+</body>
+
+</html>
