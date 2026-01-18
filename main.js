@@ -61,23 +61,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- PRODUCT CARD LOGIC (Unified) ---
     function setupProductCards() {
-        const cards = document.querySelectorAll('.product-card');
+        const cards = document.querySelectorAll('.product-card, .showcase-card');
         cards.forEach(card => {
+            const idAttr = card.getAttribute('data-id');
             const titleElement = card.querySelector('h3');
-            if (!titleElement) return;
 
-            const title = titleElement.innerText.trim();
-            // Try to find product in the global products array (loaded from products.js)
             if (typeof products !== 'undefined') {
-                const product = products.find(p => p.name === title);
+                let product;
+                if (idAttr) {
+                    product = products.find(p => p.id === idAttr);
+                } else if (titleElement) {
+                    const title = titleElement.innerText.trim();
+                    product = products.find(p => p.name === title);
+                }
 
                 if (product) {
                     card.style.cursor = 'pointer';
 
-                    // Replace "AGREGAR" button with "VER DETALLE" or update its style
                     const btn = card.querySelector('.btn-sm');
                     if (btn) {
-                        // We clone to remove existing specific listeners if any
                         const newBtn = btn.cloneNode(true);
                         newBtn.innerText = "VER DETALLE";
                         newBtn.style.backgroundColor = "var(--accent-color)";
@@ -88,9 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.parentNode.replaceChild(newBtn, btn);
                     }
 
-                    // Make the whole card clickable for mobile ease
                     card.addEventListener('click', (e) => {
-                        // Prevent navigation if clicking on specific buttons that might have other logic (though here they all go to detail)
                         window.location.href = `producto.html?id=${product.id}`;
                     });
                 }
