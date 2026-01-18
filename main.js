@@ -138,6 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
+
+            // Checkout button redirect
+            const checkoutBtn = document.querySelector('.btn-checkout');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', () => {
+                    if (this.items.length > 0) {
+                        window.location.href = 'checkout.html';
+                    } else {
+                        alert('EL ARSENAL ESTÁ VACÍO');
+                    }
+                });
+            }
         },
 
         addItem(product) {

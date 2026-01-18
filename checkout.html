@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT | OWL & SKULL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="announcement-bar">
+            <span>RESILIENCIA ES UN ARMA. DESPACHOS A TODO CHILE.</span>
+        </div>
+        <nav class="container">
+            <div class="nav-left">
+                <button id="menu-toggle">MENÚ</button>
+            </div>
+            <div class="logo">
+                <a href="index.html"><img src="Imagenes/Owl & Skull - Frente.png" alt="OWL & SKULL"
+                        class="nav-logo-img"></a>
+            </div>
+            <div class="nav-right">
+                <a href="tienda.html">TIENDA</a>
+                <a href="fight-fest.html">EVENTOS</a>
+                <a href="javascript:void(0)" id="cart-btn">CARRITO <span class="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <section class="checkout-form-section">
+                <h2>DATOS DE ENVÍO</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="nombre">NOMBRE COMPLETO</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Juan Pérez">
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">TU WHATSAPP</label>
+                        <input type="tel" id="whatsapp" required placeholder="+569 1234 5678">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">DIRECCIÓN DE ENVÍO</label>
+                        <textarea id="direccion" rows="3" required
+                            placeholder="Calle, Número, Comuna, Ciudad"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="notas">NOTAS ADICIONALES (OPCIONAL)</label>
+                        <textarea id="notas" rows="2" placeholder="Indicaciones para el despacho..."></textarea>
+                    </div>
+                </form>
+            </section>
+
+            <section class="checkout-summary-section">
+                <h2>TU PEDIDO</h2>
+                <div class="checkout-summary-box">
+                    <div id="checkout-items-list">
+                        <!-- Items populated by JS -->
+                    </div>
+                    <div class="summary-total">
+                        <span>TOTAL</span>
+                        <span id="checkout-total-value">$0</span>
+                    </div>
+                    <button type="submit" form="checkout-form" class="btn btn-whatsapp">ENVIAR PEDIDO POR
+                        WHATSAPP</button>
+                    <p
+                        style="font-size: 0.7rem; color: var(--grey-light); margin-top: 15px; text-align: center; font-family: var(--font-mono);">
+                        * Serás redirigido a WhatsApp para finalizar la compra y coordinar el pago.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">OWL & SKULL</div>
+                    <p>DIRTY BOXING STREETWEAR CHILE.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>NAVEGACIÓN</h3>
+                    <a href="index.html">INICIO</a>
+                    <a href="tienda.html">TIENDA</a>
+                    <a href="fight-fest.html">EVENTOS</a>
+                </div>
+                <div class="footer-col">
+                    <h3>SOCIAL</h3>
+                    <a href="https://instagram.com/owlandskull" target="_blank">INSTAGRAM</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OWL & SKULL. SIN DERECHOS RESERVADOS. SOLO RESILIENCIA.</p>
+                <div class="footer-credit">
+                    <span class="powered-text">Creado por</span>
+                    <a href="https://agencialeondigital.com" target="_blank" class="credit-link">
+                        <img src="LeonDIgital.cl/LEON%20DIGITAL%20-%20LOGO_Mesa%20de%20trabajo%201%20copia%202.png"
+                            alt="Leon Digital" class="credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SIDE MENU OVERLAY -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-drawer">
+            <div class="menu-header">
+                <div class="menu-logo">OWL & SKULL</div>
+                <button id="close-menu">✕</button>
+            </div>
+            <nav class="menu-links">
+                <a href="index.html" class="menu-link">INICIO</a>
+                <a href="tienda.html" class="menu-link">TIENDA</a>
+                <a href="fight-fest.html" class="menu-link">EVENTOS</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2>TU ARSENAL</h2>
+                <button id="close-cart">CERRAR</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart-msg">EL CARRITO ESTÁ VACÍO</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>TOTAL:</span>
+                    <span id="cart-total-value">$0</span>
+                </div>
+                <button class="btn btn-checkout">COMPRAR AHORA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="main.js"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

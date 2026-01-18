@@ -1150,6 +1150,113 @@ nav {
     transform: scale(1.05);
 }
 
+/* --- CHECKOUT PAGE STYLES --- */
+.checkout-container {
+    padding: 150px 20px 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+.checkout-form-section h2,
+.checkout-summary-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--grey-light);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--grey-light);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.checkout-summary-box {
+    background: var(--grey-dark);
+    padding: 30px;
+    border: 1px solid var(--grey-light);
+    position: sticky;
+    top: 120px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+}
+
+.summary-item .item-qty {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.summary-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #25d366;
+    /* WhatsApp Color */
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+@media (max-width: 850px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary-box {
+        position: static;
+    }
+}
+
+
 /* --- INDEX EVENT BANNER --- */
 .index-event-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('imagenes Eventos/evento dirtyboxing.jpg');
