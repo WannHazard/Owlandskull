@@ -1477,3 +1477,72 @@ nav {
         padding: 60px 0;
     }
 }
+
+/* --- WHATSAPP FLOATING BUBBLE --- */
+.wa-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4);
+    z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.wa-bubble:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #ff0000;
+    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.6);
+}
+
+.wa-bubble svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.wa-tooltip {
+    position: absolute;
+    right: 75px;
+    background: var(--grey-dark);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    border: 1px solid var(--grey-light);
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wa-bubble:hover .wa-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 85px;
+}
+
+@media (max-width: 768px) {
+    .wa-bubble {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .wa-tooltip {
+        display: none;
+    }
+}
