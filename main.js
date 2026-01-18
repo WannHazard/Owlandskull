@@ -258,6 +258,67 @@ document.addEventListener('DOMContentLoaded', () => {
     window.cart = cart;
     cart.init();
 
+    // --- INSTAGRAM FEED ULTRA-PREMIUM ---
+    async function loadInstagramFeed() {
+        const container = document.getElementById('ig-feed-container');
+        if (!container) return;
+
+        const BEHOLD_URL = 'https://feeds.behold.so/BJjoE8AowIQWyQkSbCYu';
+
+        try {
+            const response = await fetch(BEHOLD_URL);
+            const data = await response.json();
+
+            // 1. Sincronización de Perfil (Alta Fidelidad)
+            const avatarContainer = document.getElementById('ig-profile-avatar');
+            const usernameEl = document.getElementById('ig-username');
+            const statsContainer = document.getElementById('ig-stats');
+            const bioContainer = document.getElementById('ig-bio');
+
+            if (data.profilePictureUrl && avatarContainer) {
+                avatarContainer.innerHTML = `<img src="${data.profilePictureUrl}" alt="${data.username}">`;
+            }
+            if (data.username && usernameEl) {
+                usernameEl.innerText = data.username;
+            }
+            if (statsContainer) {
+                statsContainer.innerHTML = `
+                    <span><strong>${data.posts.length}</strong> publicaciones</span>
+                    <span><strong>${data.followersCount}</strong> seguidores</span>
+                    <span><strong>${data.followsCount}</strong> seguidos</span>
+                `;
+            }
+            if (data.biography && bioContainer) {
+                bioContainer.innerHTML = `<p>${data.biography.replace(/\n/g, '<br>')}</p>`;
+            }
+
+            // 2. Renderizado de Feed (Grid Ultra-Premium)
+            container.innerHTML = '';
+            const posts = data.posts || [];
+            posts.slice(0, 4).forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'ig-post';
+                postElement.onclick = () => window.open(post.permalink, '_blank');
+
+                const imageUrl = post.mediaType === 'VIDEO' ? post.thumbnailUrl : post.mediaUrl;
+
+                postElement.innerHTML = `
+                    <img src="${imageUrl}" alt="Instagram Post">
+                    <div class="ig-post-overlay">
+                        <span>OPEN ON INSTAGRAM</span>
+                    </div>
+                `;
+                container.appendChild(postElement);
+            });
+
+        } catch (error) {
+            console.error('Error cargando Instagram:', error);
+            container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; opacity: 0.5;">No se pudo sincronizar el arsenal social.</p>';
+        }
+    }
+
+    loadInstagramFeed();
+
     // --- WHATSAPP BUBBLE INJECTION ---
     function initWhatsAppBubble() {
         const bubble = document.createElement('div');
