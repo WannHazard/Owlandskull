@@ -10,17 +10,17 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 14990,
-                images: ["Diseños/OwlandSkull letras/DSC09739.jpg", "Diseños/OwlandSkull letras/DSC09742.jpg", "Diseños/OwlandSkull letras/DSC09812.jpg"]
+                images: ["Diseños/OwlandSkull letras/owlskull-classic-polera-img1.jpg", "Diseños/OwlandSkull letras/owlskull-classic-polera-img2.jpg", "Diseños/OwlandSkull letras/owlskull-classic-polera-img3.jpg"]
             },
             {
                 type: "MANGA LARGA",
                 price: 16990,
-                images: ["Diseños/OwlandSkull letras/DSC09760.jpg", "Diseños/OwlandSkull letras/DSC09764.jpg"]
+                images: ["Diseños/OwlandSkull letras/owlskull-classic-polera-img4.jpg", "Diseños/OwlandSkull letras/owlskull-classic-polera-img5.jpg"]
             },
             {
                 type: "SIN MANGA",
                 price: 15990,
-                images: ["Diseños/OwlandSkull letras/DSC09767.jpg", "Diseños/OwlandSkull letras/DSC09782.jpg"]
+                images: ["Diseños/OwlandSkull letras/owlskull-classic-polera-img6.jpg", "Diseños/OwlandSkull letras/owlskull-classic-polera-img7.jpg"]
             }
         ]
     },
@@ -35,17 +35,17 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 14990,
-                images: ["Diseños/OwlSkull/Set-Owlandskull-7.jpg", "Diseños/OwlSkull/DSC_2193.JPG", "Diseños/OwlSkull/OWL-fighter-29.jpg"]
+                images: ["Diseños/OwlSkull/owlskull-polera-img1.jpg", "Diseños/OwlSkull/owlskull-polera-img2.jpg", "Diseños/OwlSkull/owlskull-polera-img3.jpg"]
             },
             {
                 type: "MANGA LARGA",
                 price: 16990,
-                images: ["Diseños/OwlSkull/DSC_1907.JPG", "Diseños/OwlSkull/Set-Owlandskull-26.jpg"]
+                images: ["Diseños/OwlSkull/owlskull-polera-img4.jpg", "Diseños/OwlSkull/owlskull-polera-img5.jpg"]
             },
             {
                 type: "SIN MANGA",
                 price: 15990,
-                images: ["Diseños/OwlSkull/Set-Owlandskull-31.jpg", "Diseños/OwlSkull/OWL-fighter-28.jpg"]
+                images: ["Diseños/OwlSkull/owlskull-polera-img6.jpg", "Diseños/OwlSkull/owlskull-polera-img7.jpg"]
             }
         ]
     },
@@ -60,17 +60,17 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 14990,
-                images: ["Diseños/Chicano/DSC_1559.jpg", "Diseños/Chicano/DSC_1560.jpg", "Diseños/Chicano/DSC_1611.jpg"]
+                images: ["Diseños/Chicano/chicano-polera-img1.jpg", "Diseños/Chicano/chicano-polera-img2.jpg", "Diseños/Chicano/chicano-polera-img3.jpg"]
             },
             {
                 type: "MANGA LARGA",
                 price: 16990,
-                images: ["Diseños/Chicano/DSC_1570.jpg", "Diseños/Chicano/DSC_1738.jpg"]
+                images: ["Diseños/Chicano/chicano-polera-img4.jpg", "Diseños/Chicano/chicano-polera-img5.jpg"]
             },
             {
                 type: "SIN MANGA",
                 price: 15990,
-                images: ["Diseños/Chicano/DSC_1661.jpg", "Diseños/Chicano/DSC_1664.jpg"]
+                images: ["Diseños/Chicano/chicano-polera-img6.jpg", "Diseños/Chicano/chicano-polera-img7.jpg"]
             }
         ]
     },
@@ -85,17 +85,17 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 14990,
-                images: ["Diseños/BoxingClub/DSC_1510.jpg", "Diseños/BoxingClub/DSC_1513.jpg", "Diseños/BoxingClub/DSC_1386.jpg"]
+                images: ["Diseños/BoxingClub/boxing-owl-polera-img1.jpg", "Diseños/BoxingClub/boxing-owl-polera-img2.jpg", "Diseños/BoxingClub/boxing-owl-polera-img3.jpg"]
             },
             {
                 type: "MANGA LARGA",
                 price: 16990,
-                images: ["Diseños/BoxingClub/DSC_1522.jpg", "Diseños/BoxingClub/DSC_1531.jpg"]
+                images: ["Diseños/BoxingClub/boxing-owl-polera-img4.jpg", "Diseños/BoxingClub/boxing-owl-polera-img5.jpg"]
             },
             {
                 type: "SIN MANGA",
                 price: 15990,
-                images: ["Diseños/BoxingClub/Set-Owlandskull-8.jpg", "Diseños/BoxingClub/OWL-fighter-24.jpg"]
+                images: ["Diseños/BoxingClub/boxing-owl-polera-img6.jpg", "Diseños/BoxingClub/boxing-owl-polera-img7.jpg"]
             }
         ]
     },
@@ -110,17 +110,17 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 14990,
-                images: ["Diseños/FightFest 2019/OWL-fighter-1.jpg", "Diseños/FightFest 2019/OWL-fighter-11.jpg", "Diseños/FightFest 2019/OWL-fighter-2.jpg"]
+                images: ["Diseños/FightFest 2019/fight-fest-polera-img1.jpg", "Diseños/FightFest 2019/fight-fest-polera-img2.jpg", "Diseños/FightFest 2019/fight-fest-polera-img3.jpg"]
             },
             {
                 type: "MANGA LARGA",
                 price: 16990,
-                images: ["Diseños/FightFest 2019/OWL-fighter-12.jpg", "Diseños/FightFest 2019/OWL-fighter-8.jpg"]
+                images: ["Diseños/FightFest 2019/fight-fest-polera-img4.jpg", "Diseños/FightFest 2019/fight-fest-polera-img5.jpg"]
             },
             {
                 type: "SIN MANGA",
                 price: 15990,
-                images: ["Diseños/FightFest 2019/OWL-fighter-11.jpg"]
+                images: ["Diseños/FightFest 2019/fight-fest-polera-img2.jpg"]
             }
         ]
     },
@@ -135,42 +135,17 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 14990,
-                images: ["Diseños/BJJ/Set-Owlandskull-40.jpg", "Diseños/BJJ/Set-Owlandskull-42 (1).jpg", "Diseños/BJJ/Set-Owlandskull-43 (1).jpg"]
+                images: ["Diseños/BJJ/bjj-os-polera-img1.jpg", "Diseños/BJJ/bjj-os-polera-img2.jpg", "Diseños/BJJ/bjj-os-polera-img3.jpg"]
             },
             {
                 type: "MANGA LARGA",
                 price: 16990,
-                images: ["Diseños/BJJ/Set-Owlandskull-42 (1).jpg"]
+                images: ["Diseños/BJJ/bjj-os-polera-img2.jpg"]
             },
             {
                 type: "SIN MANGA",
                 price: 15990,
-                images: ["Diseños/BJJ/Set-Owlandskull-43 (1).jpg"]
-            }
-        ]
-    },
-    {
-        id: "shorts",
-        name: "EQUIPAMIENTO",
-        category: "EQUIPAMIENTO",
-        description: "Equipamiento de alta resistencia para el entrenamiento más exigente.",
-        sizes: ["S", "M", "L", "XL"],
-        colors: ["NEGRO", "GRIS"],
-        variants: [
-            {
-                type: "SHORT DEPORTIVO",
-                price: 16990,
-                images: ["Imagenes/Nueva carpeta/DSC_1245.jpg"]
-            },
-            {
-                type: "PANTALÓN BUZO",
-                price: 15990,
-                images: ["Imagenes/Nueva carpeta/DSC_1653.jpg"]
-            },
-            {
-                type: "POLERÓN RESILIENCE",
-                price: 28990,
-                images: ["Imagenes/Nueva carpeta/DSC_1680.jpg", "Imagenes/Nueva carpeta/Set-Owlandskull-40.jpg"]
+                images: ["Diseños/BJJ/bjj-os-polera-img3.jpg"]
             }
         ]
     }
