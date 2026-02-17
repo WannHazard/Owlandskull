@@ -26,7 +26,7 @@ const products = [
     },
     {
         id: "owlskull",
-        name: "TOPCROC OWL&SKULL",
+        name: "CROPTOP OWL&SKULL",
         category: "POLERAS",
         description: "Identidad pura. El logo que define nuestra marca en su máxima expresión. Potencia visual en cada detalle. Oferta: 2x $17.990 en Croptops básicos.",
         sizes: ["S", "M", "L", "XL"],
@@ -36,22 +36,12 @@ const products = [
                 type: "CROPTOP",
                 price: 9990,
                 images: ["modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL1.jpeg", "modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL2.jpeg", "modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL3.jpeg"]
-            },
-            {
-                type: "CROPTOP MANGA LARGA",
-                price: 9990,
-                images: ["modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL4.jpeg", "modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL5.jpeg"]
-            },
-            {
-                type: "CROPTOP ENGLOBADO",
-                price: 11990,
-                images: ["modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULLenglobado.jpeg"]
             }
         ]
     },
     {
         id: "chicano",
-        name: "TOPCROC CHICANO",
+        name: "CROPTOP CHICANO",
         category: "POLERAS",
         description: "Inspirado en el arte Chicano y la cultura lowrider. Fuerza, herencia y un estilo único. Oferta: 2x $17.990.",
         sizes: ["S", "M", "L", "XL"],
@@ -61,16 +51,6 @@ const products = [
                 type: "CROPTOP",
                 price: 9990,
                 images: ["modelos polera/Topcroc Chicano/Topcroc Chicano1.jpeg", "modelos polera/Topcroc Chicano/Topcroc Chicano2.jpeg", "modelos polera/Topcroc Chicano/Topcroc Chicano3.jpeg"]
-            },
-            {
-                type: "CROPTOP MANGA LARGA",
-                price: 9990,
-                images: ["modelos polera/Topcroc Chicano/Topcroc Chicano4.jpeg", "modelos polera/Topcroc Chicano/Topcroc Chicano5.jpeg"]
-            },
-            {
-                type: "CROPTOP SIN MANGA",
-                price: 9990,
-                images: ["modelos polera/Topcroc Chicano/Topcroc Chicano1.jpeg"]
             }
         ]
     },
