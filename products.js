@@ -138,6 +138,31 @@ const products = [
                 images: ["modelos polera/BJJ Urbano/Poleron BJJ Urbano2.jpeg", "modelos polera/BJJ Urbano/Poleron BJJ Urbano1.jpeg"]
             }
         ]
+    },
+    {
+        id: "classic-poleron",
+        name: "POLERON CLASSIC OWL&SKULL",
+        category: "POLERONES",
+        description: "La esencia clásica de Owl & Skull ahora en formato Polerón. Estilo robusto, cómodo y con nuestra identidad más pura.",
+        sizes: ["S", "M", "L", "XL"],
+        colors: ["NEGRO", "GRIS"],
+        variants: [
+            {
+                type: "SIN MANGA",
+                price: 25990,
+                images: [
+                    "modelos polera/Poleros Owl&Skull Classic/Poleros Owl&Skull Classic1.jpeg",
+                    "modelos polera/Poleros Owl&Skull Classic/Poleros Owl&Skull Classic2.jpeg"
+                ]
+            },
+            {
+                type: "CON MANGA",
+                price: 24990,
+                images: [
+                    "modelos polera/Poleros Owl&Skull Classic/Poleros Owl&Skull Classic1.jpeg"
+                ]
+            }
+        ]
     }
 ];
 
