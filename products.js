@@ -163,6 +163,57 @@ const products = [
                 ]
             }
         ]
+    },
+    // ============ ENTRADAS EVENTO ============
+    {
+        id: "entrada-general-preventa1",
+        name: "ENTRADA DIRTY BOXING — PÚBLICO GENERAL",
+        category: "ENTRADAS",
+        description: "Entrada Preventa 1 Público General para el evento Dirty Boxing Owlandskull 3ª Edición. 28 de marzo 2026 — Gimnasio La Bandera, San Ramón.",
+        sizes: ["ÚNICA"],
+        colors: ["PREVENTA 1 — $10.000"],
+        variants: [
+            {
+                type: "PREVENTA 1",
+                price: 10000,
+                images: ["imagenes Eventos/LobovsNK OwlandSkull.jpeg"]
+            },
+            {
+                type: "PREVENTA 2",
+                price: 15000,
+                images: ["imagenes Eventos/LobovsNK OwlandSkull.jpeg"]
+            },
+            {
+                type: "PUERTA",
+                price: 18000,
+                images: ["imagenes Eventos/LobovsNK OwlandSkull.jpeg"]
+            }
+        ]
+    },
+    {
+        id: "entrada-ringside-preventa1",
+        name: "ENTRADA DIRTY BOXING — RINGSIDE",
+        category: "ENTRADAS",
+        description: "Entrada Ringside para el evento Dirty Boxing Owlandskull 3ª Edición. Vista privilegiada al ring. 28 de marzo 2026 — Gimnasio La Bandera, San Ramón. ⚠️ Cupos limitados.",
+        sizes: ["ÚNICA"],
+        colors: ["RINGSIDE"],
+        variants: [
+            {
+                type: "PREVENTA 1",
+                price: 15000,
+                images: ["imagenes Eventos/LobovsNK OwlandSkull.jpeg"]
+            },
+            {
+                type: "PREVENTA 2",
+                price: 20000,
+                images: ["imagenes Eventos/LobovsNK OwlandSkull.jpeg"]
+            },
+            {
+                type: "PUERTA",
+                price: 23000,
+                images: ["imagenes Eventos/LobovsNK OwlandSkull.jpeg"]
+            }
+        ]
     }
 ];
 

@@ -342,6 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initWhatsAppBubble();
 
     // Global functions for inline onclick handlers
+    window.cart = cart;
     window.updateCartQty = (id, delta) => cart.updateQuantity(id, delta);
     window.removeFromCart = (id) => cart.removeItem(id);
+    window.getProductById = (id) => (typeof products !== 'undefined' ? products.find(p => p.id === id) : null);
 });
