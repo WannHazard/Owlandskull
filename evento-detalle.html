@@ -65,6 +65,7 @@
         </div>
         <nav class="container">
             <div class="nav-left">
+                <button id="menu-toggle">MENÚ</button>
             </div>
             <div class="logo">
                 <a href="index.html">
@@ -74,7 +75,8 @@
             </div>
             <div class="nav-right">
                 <a href="tienda.html">TIENDA</a>
-                <a href="#cart">CARRITO(0)</a>
+                <a href="fight-fest.html" class="active">EVENTOS</a>
+                <a href="javascript:void(0)" id="cart-btn">CARRITO <span class="cart-count">0</span></a>
             </div>
         </nav>
     </header>
@@ -101,7 +103,7 @@
 
                     <h2
                         style="font-family: 'Anton', sans-serif; font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 10px;">
-                        CHILE V/S URUGUAY</h2>
+                        BATALLA NACIONAL</h2>
 
                     <div
                         style="font-family: var(--font-mono); font-size: 1.1rem; color: #ccc; margin-bottom: 30px; border-left: 3px solid var(--accent-color); padding-left: 20px;">
@@ -110,7 +112,8 @@
                         <p style="margin-bottom: 0;">☠️ MMA - BOXEO - KICKBOXING</p>
                     </div>
 
-                    <a href="#" class="btn" style="box-shadow: 0 0 20px rgba(204, 0, 0, 0.4);">OBTENER ENTRADAS</a>
+                    <a href="#ticket-widget" class="btn" style="box-shadow: 0 0 20px rgba(204, 0, 0, 0.4);">OBTENER
+                        ENTRADAS</a>
                 </div>
 
                 <!-- Belt Image (Highlight) -->
@@ -132,7 +135,7 @@
                             ☠️ LA GUERRA COMIENZA</h3>
                         <p
                             style="margin-bottom: 20px; font-family: 'Inter', sans-serif; line-height: 1.8; font-size: 1.05rem;">
-                            Hay un ring. Hay un cinturón. Hay dos países. Y solo uno se va con el título.
+                            Hay un ring. Hay un cinturón. Hay honor en juego. Y solo uno se va con el título.
                         </p>
                         <p
                             style="margin-bottom: 20px; font-family: 'Inter', sans-serif; line-height: 1.6; color: #ccc;">
@@ -142,7 +145,8 @@
                         </p>
                         <p
                             style="margin-bottom: 30px; font-family: 'Inter', sans-serif; line-height: 1.6; color: #ccc;">
-                            Chile enfrenta a Uruguay en una batalla internacional sin red de protección. Atletas
+                            Nuestros mejores guerreros se enfrentan en una batalla nacional sin red de protección.
+                            Atletas
                             amateur, semiprofesionales y profesionales de todo el país se juntan bajo un mismo techo
                             para demostrar de qué está hecho cada uno.
                         </p>
@@ -156,7 +160,7 @@
                                 <li style="margin-bottom: 10px;">📅 <strong>28 de marzo, 2026</strong></li>
                                 <li style="margin-bottom: 10px;">📍 Gimnasio La Bandera — Av. La Bandera 9750, San
                                     Ramón, Santiago</li>
-                                <li style="margin-bottom: 10px;">🌎 Chile 🇨🇱 vs Uruguay 🇺🇾</li>
+                                <li style="margin-bottom: 10px;">�🇱 Pelea De Alto Nivel</li>
                                 <li style="margin-bottom: 10px;">⚖️ Fiscaliza: <strong>WKL Chile</strong> (World
                                     Kickboxing League)</li>
                                 <li style="margin-bottom: 0;">🚑 Respaldo: Ambulancias y Bomberos de Chile</li>
@@ -176,7 +180,7 @@
                                 PELEA ESTELAR</h4>
                             <p style="font-family: 'Inter', sans-serif; line-height: 1.6; color: #ddd;">
                                 El combate principal enfrenta a <strong style="color:white;">Lobo (Arica)</strong>
-                                contra <strong style="color:white;">NK Lutador (Uruguay)</strong> — una pelea por el
+                                contra <strong style="color:white;">NK Lutador (Santiago)</strong> — una pelea por el
                                 título profesional con codos, guantillas y sin lugar para errores.
                             </p>
                         </div>
@@ -198,7 +202,7 @@
                                 CARTELERA COMPLETA</h4>
                             <ul
                                 style="list-style: none; padding: 0; font-family: 'Inter', sans-serif; color: #ccc; line-height: 2;">
-                                <li>🥊 4 combates internacionales Chile 🇨🇱 vs Uruguay 🇺🇾</li>
+                                <li>🥊 4 combates co-estelares nacionales</li>
                                 <li>💀 10 combates amateur — Kickboxing, MMA y Boxeo</li>
                                 <li>🏆 Premio al Mejor KO de la noche</li>
                                 <li>� Premio a la Mejor Pelea del Evento</li>
@@ -303,8 +307,8 @@
                         <div style="text-align: center; flex: 1; min-width: 120px;">
                             <div style="font-family: 'Anton', sans-serif; font-size: 1.6rem; letter-spacing: 1px;">NK
                                 LUTADOR</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #aaa;">🇺🇾
-                                URUGUAY</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #aaa;">��
+                                SANTIAGO</div>
                         </div>
                     </div>
 
@@ -323,8 +327,8 @@
                         <div style="text-align: center; flex: 1; min-width: 120px;">
                             <div style="font-family: 'Anton', sans-serif; font-size: 1.6rem; letter-spacing: 1px;">DANI
                                 LA MACHETE</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #aaa;">🇺🇾
-                                URUGUAY</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #aaa;">��
+                                CHILE</div>
                         </div>
                     </div>
                 </div>
@@ -337,9 +341,9 @@
                         <div style="font-size: 2rem; margin-bottom: 10px;">🥊</div>
                         <h4
                             style="font-family: 'Anton', sans-serif; font-size: 1.1rem; margin-bottom: 8px; color: white;">
-                            4 COMBATES INTERNACIONALES</h4>
+                            4 COMBATES NACIONALES</h4>
                         <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #aaa;">Amateur y
-                            Semi-Profesional<br>🇨🇱 Chile vs Uruguay 🇺🇾</p>
+                            Semi-Profesional<br>🇨🇱 Los mejores de Chile</p>
                     </div>
                     <div
                         style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 25px; text-align: center;">
@@ -539,34 +543,9 @@
                         </video>
                     </div>
 
-                    <!-- New Event Info Images -->
-                    <div class="gallery-item">
-                        <img src="Eventos%20img/evento%20dirty%20boxing.jpeg" alt="Evento Dirty Boxing"
-                            style="height: 250px;">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Eventos%20img/invitacion.jpeg" alt="Invitación Evento" style="height: 250px;">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Eventos%20img/invitacion%202.jpeg" alt="Detalle Invitación" style="height: 250px;">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Eventos%20img/proceso%20de%20inscripcion.jpeg" alt="Proceso de Inscripción"
-                            style="height: 250px;">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Eventos%20img/promo%20polera%20inscripcion.jpeg" alt="Promo Polera Inscripción"
-                            style="height: 250px;">
-                    </div>
-
                     <!-- Existing Event Posters (Moderate Size) -->
                     <div class="gallery-item">
                         <img src="imagenes Eventos/evento dirtyboxing.jpg" alt="Poster Evento" style="height: 250px;">
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="imagenes Eventos/owlskull dirtyboxing.jpg" alt="Flyer Dirty Boxing"
-                            style="height: 250px;">
                     </div>
 
                     <div class="gallery-item">
@@ -606,6 +585,48 @@
             </div>
         </div>
     </footer>
+
+    <!-- SIDE MENU OVERLAY -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-drawer">
+            <div class="menu-header">
+                <div class="menu-logo">OWL & SKULL</div>
+                <button id="close-menu">✕</button>
+            </div>
+            <nav class="menu-links">
+                <a href="index.html" class="menu-link">INICIO</a>
+                <a href="tienda.html" class="menu-link">TIENDA</a>
+                <a href="fight-fest.html" class="menu-link">EVENTOS</a>
+            </nav>
+            <div class="menu-footer">
+                <div class="menu-social">
+                    <a href="https://instagram.com/owlandskull" target="_blank">INSTAGRAM</a>
+                    <a href="mailto:contacto@owlandskull.cl">CONTACTO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOPPING CART MODAL -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2>TU ARSENAL</h2>
+                <button id="close-cart">CERRAR</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Items will be injected here -->
+                <div class="empty-cart-msg">EL CARRITO ESTÁ VACÍO</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>TOTAL:</span>
+                    <span id="cart-total-value">$0</span>
+                </div>
+                <button class="btn btn-checkout">COMPRAR AHORA</button>
+            </div>
+        </div>
+    </div>
 
     <script src="products.js"></script>
     <script src="main.js"></script>

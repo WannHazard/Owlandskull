@@ -35,7 +35,7 @@ const products = [
             {
                 type: "CROPTOP",
                 price: 9990,
-                images: ["modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL1.jpeg", "modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL2.jpeg", "modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL3.jpeg"]
+                images: ["modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL1.jpeg", "modelos polera/Topcroc OWL&SKULL/Topcroc OWL&SKULL2.jpeg"]
             }
         ]
     },
