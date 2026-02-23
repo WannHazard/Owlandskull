@@ -10,7 +10,7 @@ const products = [
             {
                 type: "MANGA CORTA",
                 price: 15000,
-                images: ["modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL1.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL2.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL4.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL9.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL10.jpeg", "modelos polera/Clasica OWL&SKULL/WhatsApp Image 2026-02-14 at 1.15.02 PM.jpeg"]
+                images: ["modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL6.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL2.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL4.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL9.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL10.jpeg", "modelos polera/Clasica OWL&SKULL/WhatsApp Image 2026-02-14 at 1.15.02 PM.jpeg", "modelos polera/Clasica OWL&SKULL/Clasica OWL&SKULL1.jpeg"]
             },
             {
                 type: "MANGA LARGA",
